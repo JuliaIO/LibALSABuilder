@@ -2,6 +2,9 @@
 # `julia build_tarballs.jl --help` to see a usage message.
 using BinaryBuilder
 
+name = "LibALSABuilder"
+version = v"1.1.6"
+
 # Collection of sources required to build LibALSABuilder
 sources = [
     "ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.1.6.tar.bz2" =>
@@ -40,5 +43,5 @@ dependencies = [
 ]
 
 # Build the tarballs, and possibly a `build.jl` as well.
-build_tarballs(ARGS, "LibALSABuilder", sources, script, platforms, products, dependencies)
+build_tarballs(ARGS, name, version, sources, script, platforms, products, dependencies)
 
